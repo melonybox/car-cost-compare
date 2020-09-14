@@ -9,10 +9,16 @@
   <body>
     <div>
       <p>A car cost compare calculator.</p>
+      <p id="milesDisplay"></p>
       <p id="carTarget"></p>
       <div id="carList">
 
       </div>
+      <form id="milesForm">
+        <label for="milesPerYear">Miles Per Year:</label>
+        <input type="number" name="milesPerYear" value="0">
+        <input type="submit" name="submit" value="Submit">
+      </form>
       <form id="carInput">
         <label for="carName">Car:</label>
         <input type="text" name="carName" value="">
@@ -20,6 +26,7 @@
         <input type="number" name="carCost" value="0">
         <label for="carAvgMpg">Avg Mpg:</label>
         <input type="number" name="carAvgMpg" value="0">
+        <input type="submit" name="submit" value="Submit">
       </form>
     </div>
   </body>
