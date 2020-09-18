@@ -12,24 +12,40 @@
       <p id="milesDisplay"></p>
       <p id="carTarget"></p>
       <div id="carList"></div>
-      <form id="milesForm">
-        <label for="milesPerYear">Miles Per Year:</label>
-        <input type="number" name="milesPerYear" value="0">
-        <label for="costPerGallon">Fuel Cost Per Gallon:</label>
-        <input type="number" name="costPerGallon" value="0">
-        <label for="stateSalesTax">State Sales Tax:</label>
-        <input type="number" name="stateSalesTax" value="0">
-        <label for="apr">APR:</label>
-        <input type="number" name="apr" value="0">
+      
+      <form id="milesForm" class="centerColumn">
+        <div>
+          <label for="milesPerYear">Miles Per Year:</label>
+          <input type="number" name="milesPerYear" value="0">
+        </div>
+        <div>
+          <label for="costPerGallon">Fuel Cost Per Gallon:</label>
+          <input type="number" name="costPerGallon" value="0">
+        </div>
+        <div>
+          <label for="stateSalesTax">State Sales Tax:</label>
+          <input type="number" name="stateSalesTax" value="0">
+        </div>
+        <div>
+          <label for="apr">APR:</label>
+          <input type="number" name="apr" value="0">
+        </div>
         <input type="submit" name="submit" value="Submit">
       </form>
-      <form id="carInput">
-        <label for="carName">Car:</label>
-        <input type="text" name="carName" value="">
-        <label for="carCost">Car Cost:</label>
-        <input type="number" name="carCost" value="0">
-        <label for="carAvgMpg">Avg Mpg:</label>
-        <input type="number" name="carAvgMpg" value="0">
+
+      <form id="carInput" class="centerColumn">
+        <div>
+          <label for="carName">Car:</label>
+          <input type="text" name="carName" value="">
+        </div>
+        <div>
+          <label for="carCost">Car Cost:</label>
+          <input type="number" name="carCost" value="0">
+        </div>
+        <div>
+          <label for="carAvgMpg">Avg Mpg:</label>
+          <input type="number" name="carAvgMpg" value="0">
+        </div>
         <input type="submit" name="submit" value="Submit">
       </form>
     </div>
