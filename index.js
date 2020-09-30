@@ -1,3 +1,5 @@
+let carList = {}
+
 document.addEventListener('DOMContentLoaded', () => {
   const inputCarForm = document.getElementById('carInput')
   const inputMilesForm = document.getElementById('milesForm')
@@ -10,8 +12,9 @@ const carFormSubmit = () => {
   const {carName: {value: carName},
          carCost: {value: carCost},
          carAvgMpg: {value: carAvgMpg}} = event.target
+  const carProperties = {carCost, carAvgMpg}
 
-  console.log(carName,carCost,carAvgMpg)
+  carList[carName] = carProperties
 }
 
 // const {
