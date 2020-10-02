@@ -1,4 +1,8 @@
-#carTarget,#carList,#milesDisplay {
+#carList {
+  list-style-type: none;
+}
+
+.hidden {
   display: none;
 }
 
