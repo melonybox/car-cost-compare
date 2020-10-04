@@ -1,3 +1,5 @@
+'use strict'
+
 let carListObject = {}
 
 const addCarToList = (carName) => {
@@ -10,16 +12,19 @@ const addCarToList = (carName) => {
   carListLi.dataset.carName = carName
   carListLi.classList.add('centerRow')
   carListCarName.innerText = carName
+  carListCarName.setAttribute('name', 'carName')
   carListCarCost.innerText = `${carListObject[carName].carCost}`
+  carListCarCost.setAttribute('name', 'carCost')
   carListCarAvgMpg.innerText = `${carListObject[carName].carAvgMpg}`
+  carListCarAvgMpg.setAttribute('name', 'carAvgMpg')
 
   carListLi.append(carListCarName)
   carListLi.append(carListCarCost)
   carListLi.append(carListCarAvgMpg)
   carList.append(carListLi)
 
-  if (carList.classList.contains("hidden")) {
-    carList.classList.remove("hidden")
+  if (carList.classList.contains('hidden')) {
+    carList.classList.remove('hidden')
   }
 }
 
@@ -43,7 +48,7 @@ const milesFormSubmit = () => {
     if (x.dataset.carName === undefined) {
       continue
     }
-    console.log("bye")
+    debugger
   }
 
   //carList.children[0].dataset.carName === undefined, this is row titles
