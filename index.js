@@ -34,10 +34,22 @@ const carFormSubmit = () => {
   addCarToList(carName)
 }
 
-const milesFormSubmit = (event, inputMilesForm) => {
+const milesFormSubmit = () => {
   event.preventDefault()
-  debugger
 
+  const carList = document.getElementById('carList').children
+
+  for (const x of carList) {
+    if (x.dataset.carName === undefined) {
+      continue
+    }
+    console.log("bye")
+  }
+
+  //carList.children[0].dataset.carName === undefined, this is row titles
+  // carList.querySelectorAll('li')[0].dataset.carName === undefined, this is row titles
+  // carList.querySelectorAll('ul > li')[0].dataset.carName === undefined, this is row titles
+  // carList.querySelectorAll('ul > *')[0].dataset.carName === undefined, this is row titles
 }
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -45,8 +57,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputMilesForm = document.getElementById('milesForm')
 
   inputCarForm.addEventListener('submit', carFormSubmit)
-  inputMilesForm.addEventListener('submit', (event) => milesFormSubmit(event, inputMilesForm))
+  inputMilesForm.addEventListener('submit', milesFormSubmit)
 })
+
+// const carFormSubmit = () => {
+//   event.preventDefault()
+//   const {carName: {value: carName},
+//          carCost: {value: carCost},
+//          carAvgMpg: {value: carAvgMpg}} = event.target
+//   const carProperties = {carCost, carAvgMpg}
+//
+//   carListObject[carName] = carProperties
+//   addCarToList(carName)
+// }
 
 // const {
 //   name,
@@ -59,3 +82,11 @@ document.addEventListener('DOMContentLoaded', () => {
 //
 // console.log(name, surname, javaScriptYears, reactYears);
 // // Barry Doyle 7 4
+
+// inputMilesForm.addEventListener('submit', (event) => milesFormSubmit(event, inputMilesForm))
+//
+//
+// const milesFormSubmit = (event, inputMilesForm) => {
+//   event.preventDefault()
+//
+// }
