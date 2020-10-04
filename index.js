@@ -23,13 +23,6 @@ const addCarToList = (carName) => {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const inputCarForm = document.getElementById('carInput')
-  const inputMilesForm = document.getElementById('milesForm')
-
-  inputCarForm.addEventListener('submit', carFormSubmit)
-})
-
 const carFormSubmit = () => {
   event.preventDefault()
   const {carName: {value: carName},
@@ -40,6 +33,20 @@ const carFormSubmit = () => {
   carListObject[carName] = carProperties
   addCarToList(carName)
 }
+
+const milesFormSubmit = (event, inputMilesForm) => {
+  event.preventDefault()
+  debugger
+
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const inputCarForm = document.getElementById('carInput')
+  const inputMilesForm = document.getElementById('milesForm')
+
+  inputCarForm.addEventListener('submit', carFormSubmit)
+  inputMilesForm.addEventListener('submit', (event) => milesFormSubmit(event, inputMilesForm))
+})
 
 // const {
 //   name,
